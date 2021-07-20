@@ -1,0 +1,107 @@
+#show-video {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 16px 0px 16px 0px;
+}
+
+.preview-image img {
+    width: 850px;
+    height: 547px;
+    margin-right: 16px;
+    background: linear-gradient(to top, black, cyan); 
+}
+
+.carousel-video {
+    position: relative;
+    cursor: pointer;
+}
+
+.control-slide {
+    position: absolute;
+    background-color: rgba(18, 18, 18, 0.45);
+    border: 1px solid gray;
+    border-radius: 4px;
+    color: white;
+    padding: 12px;
+}
+
+.control-slide:hover {
+    color: rgb(245, 197, 24);
+}
+
+.control-slide-next {
+    right: 20px !important;
+    bottom: 50%;
+}
+
+.control-slide-previous {
+    left: 20px !important;;
+    bottom: 50%;
+}
+
+.slide {
+    position: relative;
+}
+
+.slide .details {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.slide .details .poster {
+    /* position: relative; */
+}
+
+.slide .details .poster img {
+    width: 165px;
+    height: 244px;
+}
+
+.slide .details .poster .icons-in-details {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.slide .details .poster .icons-in-details:hover .bookmark{
+    color: rgb(99, 89, 89)
+}
+
+.slide .details .poster .bookmark {
+    position: absolute;
+    font-size: 50px;
+    color: rgb(54, 50, 50);
+    top: 0;
+    left: 0;
+    /* fill: rgba(255, 255, 255, 0.32); */
+}
+
+
+.slide .details .poster .plus {
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    transform: translate(50%, 50%);
+}
+
+.upnext-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#upnext-header {
+    color: rgb(245, 197, 24);
+    font-size: 20px;
+    font-stretch: 100%;
+    font-weight: 600;
+}
+
+.image-in-side img {
+    width: 88px;
+    height: 130px;
+    margin-left: 16px;
+}

@@ -1,0 +1,51 @@
+body {
+    background: black;
+    /* display: flex;
+    flex-wrap: wrap;
+    flex-direction: center; */
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#navbar {
+    width: 1280px;
+    height: 36px;
+    /* margin: 0px 54px 0px 54px !important; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#navbar button {
+    color: #fff;
+    background-color: black;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    text-decoration: none;
+}
+
+#logo-in-navbar {
+    width: 64px;
+    height: 32px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.modal {
+    background: white;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

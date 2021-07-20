@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+		<link rel="stylesheet" type="text/css" href="navbar.css" />
+		<link rel="stylesheet" type="text/css" href="video-preview.css" />
+		<title>IMDb Negar</title>
+	</head>
+	<body>
+		<nav>
+			<div id="navbar">
+				<div id="log">
+					<a href="https://www.imdb.com/?ref_=nv_home">
+						<img
+							id="logo-in-navbar"
+							src="images/navbar/imdb.jpeg"
+							alt="imdb-logo"
+						/>
+					</a>
+				</div>
+
+				<div id="menu">
+					<button id="menu-btn">
+						<i class="fa fa-bars"></i>
+						Menu
+					</button>
+				</div>
+				<div class="modal hide">123</div>
+
+				<form id="search-box" action="#">
+					<div id="search-category-selector"></div>
+					<div id="search-type-head">
+						<input
+							type="search"
+							class="search-data"
+							placeholder="Search IMDb"
+							style="
+								width: 600px;
+								height: 35px;
+								box-sizing: border-box;
+								border: 2px solid #ccc;
+								border-radius: 4px;
+								font-size: 16px;
+							"
+						/>
+					</div>
+				</form>
+
+				<div id="imdb-pro">
+					<button id="imdb-pro-btn">IMDbPro</button>
+				</div>
+
+				<div id="watchlist">
+					<button id="watchlist-btn">
+						<i class="fas fa-bookmark"></i>
+						Watchlist
+					</button>
+				</div>
+
+				<div id="sign-in">
+					<button id="sign-in-btn">Sign In</button>
+				</div>
+			</div>
+		</nav>
+
+		<div id="show-video">
+			<div class="carousel-video">
+				<div class="slide">
+					<div class="preview-image">
+						<img src="images/video-preview/turning_red.jpg" alt="Turning Red" />
+					</div>
+					<div class="details">
+						<div class="poster">
+							<img src="images/video-preview/soul.jpg" />
+							<div class="icons-in-details">
+								<div class="bookmark">
+									<i class="fas fa-bookmark"></i>
+								</div>
+								<div class="plus">
+									<i class="fas fa-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="icon">
+							<i
+								class="fa fa-play-circle"
+								style="font-size: 24px; color: white"
+							></i>
+						</div>
+						<div class="titles" style="color: white">
+							<div class="header">Turning Red</div>
+							<div class="short">Lorem ipsum dolor sit!</div>
+						</div>
+						<div class="timeline">1.31</div>
+					</div>
+				</div>
+				<div class="control-slide control-slide-next">
+					<i class="fas fa-chevron-right" style="font-size: 38px"></i>
+				</div>
+				<div class="control-slide control-slide-previous">
+					<i class="fas fa-chevron-left" style="font-size: 38px"></i>
+				</div>
+			</div>
+			<div class="upnext-video">
+				<div id="upnext-header">
+					<h4>Up next</h4>
+				</div>
+				<div class="image-in-side">
+					<img src="images/video-preview/soul.jpg" alt="Soul" />
+					<!-- <button id="watchlist-btn" style="border: none;"> -->
+					<i
+						class="fa fa-play-circle"
+						style="font-size: 24px; color: white"
+					></i>
+					<!-- </button> -->
+				</div>
+				<div class="image-in-side">
+					<img src="images/video-preview/luca-side.jpeg" alt="Luca" />
+				</div>
+				<div class="image-in-side">
+					<img src="images/video-preview/soul.jpg" alt="Soul" />
+				</div>
+			</div>
+		</div>
+
+		<script defer>
+			const modal = document.querySelector(".modal");
+			document.querySelector("#menu-btn").addEventListener("click", () => {
+				modal.classList.toggle("hide");
+			});
+		</script>
+	</body>
+</html>
