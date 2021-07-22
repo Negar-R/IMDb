@@ -9,12 +9,13 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 		/>
 		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+		<link rel="stylesheet" type="text/css" href="general.css" />
 		<link rel="stylesheet" type="text/css" href="navbar.css" />
 		<link rel="stylesheet" type="text/css" href="video-preview.css" />
 		<title>IMDb Negar</title>
 	</head>
 	<body>
-		<nav>
+		<nav class="container">
 			<div id="navbar">
 				<div id="log">
 					<a href="https://www.imdb.com/?ref_=nv_home">
@@ -50,6 +51,7 @@
 								font-size: 16px;
 							"
 						/>
+						<i class="fa fa-search"></i>	
 					</div>
 				</form>
 
@@ -70,7 +72,7 @@
 			</div>
 		</nav>
 
-		<div id="show-video">
+		<div id="show-video" class="container">
 			<div class="carousel-video">
 				<div class="slide">
 					<div class="preview-image">
@@ -88,19 +90,75 @@
 								</div>
 							</div>
 						</div>
-						<div class="icon">
-							<i
-								class="fa fa-play-circle"
-								style="font-size: 24px; color: white"
-							></i>
+						<div class="description">
+							<div class="icon">
+								<i class="fa fa-play-circle"></i>
+							</div>
+							<div class="titles" style="color: white">
+								<div class="header">Turning Red</div>
+								<div class="short">Lorem ipsum dolor sit!</div>
+							</div>
+							<div class="timeline">1.31</div>
 						</div>
-						<div class="titles" style="color: white">
-							<div class="header">Turning Red</div>
-							<div class="short">Lorem ipsum dolor sit!</div>
-						</div>
-						<div class="timeline">1.31</div>
 					</div>
 				</div>
+				<div class="slide hide">
+					<div class="preview-image">
+						<img src="images/video-preview/red.jpg" alt="Turning Red" />
+					</div>
+					<div class="details">
+						<div class="poster">
+							<img src="images/video-preview/soul.jpg" />
+							<div class="icons-in-details">
+								<div class="bookmark">
+									<i class="fas fa-bookmark"></i>
+								</div>
+								<div class="plus">
+									<i class="fas fa-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="description">
+							<div class="icon">
+								<i class="fa fa-play-circle"></i>
+							</div>
+							<div class="titles" style="color: white">
+								<div class="header">Turning Red</div>
+								<div class="short">Lorem ipsum dolor sit!</div>
+							</div>
+							<div class="timeline">1.31</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide hide">
+					<div class="preview-image">
+						<img src="images/video-preview/baby.jpg" alt="Turning Red" />
+					</div>
+					<div class="details">
+						<div class="poster">
+							<img src="images/video-preview/soul.jpg" />
+							<div class="icons-in-details">
+								<div class="bookmark">
+									<i class="fas fa-bookmark"></i>
+								</div>
+								<div class="plus">
+									<i class="fas fa-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="description">
+							<div class="icon">
+								<i class="fa fa-play-circle"></i>
+							</div>
+							<div class="titles" style="color: white">
+								<div class="header">Turning Red</div>
+								<div class="short">Lorem ipsum dolor sit!</div>
+							</div>
+							<div class="timeline">1.31</div>
+						</div>
+					</div>
+				</div>
+			
 				<div class="control-slide control-slide-next">
 					<i class="fas fa-chevron-right" style="font-size: 38px"></i>
 				</div>
@@ -109,32 +167,96 @@
 				</div>
 			</div>
 			<div class="upnext-video">
-				<div id="upnext-header">
-					<h4>Up next</h4>
-				</div>
-				<div class="image-in-side">
-					<img src="images/video-preview/soul.jpg" alt="Soul" />
-					<!-- <button id="watchlist-btn" style="border: none;"> -->
-					<i
-						class="fa fa-play-circle"
-						style="font-size: 24px; color: white"
-					></i>
-					<!-- </button> -->
-				</div>
-				<div class="image-in-side">
-					<img src="images/video-preview/luca-side.jpeg" alt="Luca" />
-				</div>
-				<div class="image-in-side">
-					<img src="images/video-preview/soul.jpg" alt="Soul" />
-				</div>
+				<!-- <div class="upnext-video-content"> -->
+					<div id="upnext-header">
+						<h4>Up next</h4>
+					</div>
+					<div class="image-in-side">
+						<img src="images/video-preview/soul.jpg" alt="Soul" />
+						<div class="up-next-details">
+							<div class="icon">
+								<i
+									class="fa fa-play-circle"
+									style="font-size: 35px; color: white"
+								></i>
+							</div>
+							<div class="titles">
+								<div class="header">4 Feel-comedies</div>
+								<div class="short">See our recommendations</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="image-in-side">
+						<img src="images/video-preview/luca-side.jpeg" alt="Luca" />
+						<div class="up-next-details">
+							<div class="icon">
+								<i
+									class="fa fa-play-circle"
+									style="font-size: 35px; color: white"
+								></i>
+							</div>
+							<div class="titles">
+								<div class="header">4 Feel-comedies</div>
+								<div class="short">See our recommendations</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="image-in-side">
+						<img src="images/video-preview/soul.jpg" alt="Soul" />
+						<div class="up-next-details">
+							<div class="icon">
+								<i
+									class="fa fa-play-circle"
+									style="font-size: 35px; color: white"
+								></i>
+							</div>
+							<div class="titles">
+								<div class="header">4 Feel-comedies</div>
+								<div class="short">See our recommendations</div>
+							</div>
+
+						</div>
+					</div>
+				<!-- </div> -->
 			</div>
 		</div>
 
 		<script defer>
+			const slides = document.querySelectorAll(".slide");
 			const modal = document.querySelector(".modal");
 			document.querySelector("#menu-btn").addEventListener("click", () => {
 				modal.classList.toggle("hide");
 			});
+
+			let slideIndex = 1;
+			function changeSlide(index) {
+				console.log("here in changeSlide");
+				showSlides(slideIndex += index);
+			}
+
+			document.querySelector(".control-slide-next").addEventListener("click", () => {
+				changeSlide(1);
+			})
+
+			document.querySelector(".control-slide-previous").addEventListener("click", () => {
+				changeSlide(-1);
+			})
+
+			function showSlides(index) {
+				console.log("here in showSlides");
+				if (index > slides.length - 1) {
+					slideIndex = 0;
+				}
+				else if (index < 0) {
+					slideIndex = slides.length - 1;
+				}
+				for (let i = 0; i < slides.length; i++) {
+					slides[i].classList.add("hide");
+				}
+				slides[slideIndex].classList.remove("hide");
+			}
 		</script>
 	</body>
 </html>

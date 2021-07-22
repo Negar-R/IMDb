@@ -1,25 +1,11 @@
-body {
-    background: black;
-    /* display: flex;
-    flex-wrap: wrap;
-    flex-direction: center; */
-}
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-}
-
 #navbar {
-    width: 1280px;
+    width: 100%;
     height: 36px;
     /* margin: 0px 54px 0px 54px !important; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 #navbar button {
@@ -48,4 +34,13 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+
+.search-type-head {
+    position: relative;
+}
+
+.search-type-head  .fa .fa-search {
+    position: absolute;
 }
