@@ -11,13 +11,14 @@
 		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 		<link rel="stylesheet" type="text/css" href="general.css" />
 		<link rel="stylesheet" type="text/css" href="navbar.css" />
+		<link rel="stylesheet" type="text/css" href="modal-menu.css" />
 		<link rel="stylesheet" type="text/css" href="video-preview.css" />
 		<title>IMDb Negar</title>
 	</head>
 	<body>
 		<nav class="container">
 			<div id="navbar">
-				<div id="log">
+				<div class="log">
 					<a href="https://www.imdb.com/?ref_=nv_home">
 						<img
 							id="logo-in-navbar"
@@ -33,27 +34,77 @@
 						Menu
 					</button>
 				</div>
-				<div class="modal hide">123</div>
 
-				<form id="search-box" action="#">
-					<div id="search-category-selector"></div>
-					<div id="search-type-head">
-						<input
-							type="search"
-							class="search-data"
-							placeholder="Search IMDb"
-							style="
-								width: 600px;
-								height: 35px;
-								box-sizing: border-box;
-								border: 2px solid #ccc;
-								border-radius: 4px;
-								font-size: 16px;
-							"
-						/>
-						<i class="fa fa-search"></i>	
+				<div class="search-box" action="#">
+					<div class="category-selector">
+						<div class="dropdown-selector">
+							<div class="content" style="margin-top: 7.5px">All</div>
+							<div class="dropdown-icon" style="margin-top: 7.7px">
+								<i class="fas fa-caret-down"></i>
+							</div>
+							<div class="category hide">
+								<div class="category-content">
+									<ul
+										class="category-items"
+										style="list-style-type: none; padding: 0px"
+									>
+										<li class="flex-category-item">
+											<i
+												class="fa fa-search"
+												style="color: rgb(245, 197, 24)"
+											></i>
+											<span style="color: rgb(245, 197, 24)">All</span>
+										</li>
+										<li class="flex-category-item">
+											<i class="fas fa-film"></i>
+											<span>Titles</span>
+										</li>
+										<li class="flex-category-item">
+											<i class="fas fa-tv"></i>
+											<span>TV Episodes</span>
+										</li>
+										<li class="flex-category-item">
+											<i class="fas fa-user"></i>
+											<span>Celebs</span>
+										</li>
+										<li class="flex-category-item">
+											<i class="far fa-building"></i>
+											<span>Companies</span>
+										</li>
+										<li class="flex-category-item">
+											<i
+												class="fas fa-tag"
+												style="transform: rotate(135deg)"
+											></i>
+											<span>Keywords</span>
+										</li>
+										<!-- <hr
+											style="border: 1px solid #ccc; background-color: black"
+										/> -->
+										<li class="flex-category-item">
+											<i style="font-size: 24px" class="fab fa-searchengin"></i>
+											<span>Advanced Search</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
-				</form>
+
+					<div class="search-type-head">
+						<div class="search-input">
+							<input
+								type="search"
+								class="search-data"
+								placeholder="Search IMDb"
+							/>
+						</div>
+						<!-- <div class="search-icon" style="color: white; font-size: 24px">
+							<i class="fa fa-search"></i>
+						</div> -->
+						<!-- <i class="fa fa-search"></i> -->
+					</div>
+				</div>
 
 				<div id="imdb-pro">
 					<button id="imdb-pro-btn">IMDbPro</button>
@@ -123,7 +174,7 @@
 								<i class="fa fa-play-circle"></i>
 							</div>
 							<div class="titles" style="color: white">
-								<div class="header">Turning Red</div>
+								<div class="header">Turning Green</div>
 								<div class="short">Lorem ipsum dolor sit!</div>
 							</div>
 							<div class="timeline">1.31</div>
@@ -158,7 +209,7 @@
 						</div>
 					</div>
 				</div>
-			
+
 				<div class="control-slide control-slide-next">
 					<i class="fas fa-chevron-right" style="font-size: 38px"></i>
 				</div>
@@ -168,88 +219,251 @@
 			</div>
 			<div class="upnext-video">
 				<!-- <div class="upnext-video-content"> -->
-					<div id="upnext-header">
-						<h4>Up next</h4>
-					</div>
-					<div class="image-in-side">
-						<img src="images/video-preview/soul.jpg" alt="Soul" />
-						<div class="up-next-details">
-							<div class="icon">
-								<i
-									class="fa fa-play-circle"
-									style="font-size: 35px; color: white"
-								></i>
-							</div>
-							<div class="titles">
-								<div class="header">4 Feel-comedies</div>
-								<div class="short">See our recommendations</div>
-							</div>
-
+				<div id="upnext-header">
+					<h4>Up next</h4>
+				</div>
+				<div class="image-in-side">
+					<img src="images/video-preview/soul.jpg" alt="Soul" />
+					<div class="up-next-details">
+						<div class="icon">
+							<i
+								class="fa fa-play-circle"
+								style="font-size: 35px; color: white"
+							></i>
+						</div>
+						<div class="titles">
+							<div class="header">4 Feel-comedies</div>
+							<div class="short">See our recommendations</div>
 						</div>
 					</div>
-					<div class="image-in-side">
-						<img src="images/video-preview/luca-side.jpeg" alt="Luca" />
-						<div class="up-next-details">
-							<div class="icon">
-								<i
-									class="fa fa-play-circle"
-									style="font-size: 35px; color: white"
-								></i>
-							</div>
-							<div class="titles">
-								<div class="header">4 Feel-comedies</div>
-								<div class="short">See our recommendations</div>
-							</div>
-
+				</div>
+				<div class="image-in-side">
+					<img src="images/video-preview/luca-side.jpeg" alt="Luca" />
+					<div class="up-next-details">
+						<div class="icon">
+							<i
+								class="fa fa-play-circle"
+								style="font-size: 35px; color: white"
+							></i>
+						</div>
+						<div class="titles">
+							<div class="header">4 Feel-comedies</div>
+							<div class="short">See our recommendations</div>
 						</div>
 					</div>
-					<div class="image-in-side">
-						<img src="images/video-preview/soul.jpg" alt="Soul" />
-						<div class="up-next-details">
-							<div class="icon">
-								<i
-									class="fa fa-play-circle"
-									style="font-size: 35px; color: white"
-								></i>
-							</div>
-							<div class="titles">
-								<div class="header">4 Feel-comedies</div>
-								<div class="short">See our recommendations</div>
-							</div>
-
+				</div>
+				<div class="image-in-side">
+					<img src="images/video-preview/soul.jpg" alt="Soul" />
+					<div class="up-next-details">
+						<div class="icon">
+							<i
+								class="fa fa-play-circle"
+								style="font-size: 35px; color: white"
+							></i>
+						</div>
+						<div class="titles">
+							<div class="header">4 Feel-comedies</div>
+							<div class="short">See our recommendations</div>
 						</div>
 					</div>
+				</div>
 				<!-- </div> -->
 			</div>
 		</div>
 
+		<div class="featured-today">
+			<div class="title">
+				<span>Featured today</span>
+			</div>
+		</div>
+
+		<div class="modal hide">
+			<div class="modal-content container">
+				<div class="modal-header">
+					<div class="logo">
+						<a href="https://www.imdb.com/?ref_=nv_home">
+							<img
+								id="logo-in-menu"
+								src="images/navbar/imdb.jpeg"
+								alt="imdb-logo"
+							/>
+						</a>
+					</div>
+					<div class="icon">
+						<button id="close-btn">
+							<i class="far fa-times-circle"></i>
+						</button>
+					</div>
+				</div>
+				<div class="modal-items">
+					<div class="movies box">
+						<div class="item-title movies">
+							<div class="icon">
+								<i class="fas fa-film" style="font-size: 27px"></i>
+							</div>
+							<div class="title">
+								<span>Movies</span>
+							</div>
+						</div>
+						<div class="items-name">
+							<ul>
+								<li><a>Release Calender</a></li>
+								<li><a>DVD & Blu-ray Releases</a></li>
+								<li><a>Top Rated Movies</a></li>
+								<li><a>Most Popular Movies</a></li>
+								<li><a>Browse Movies By Genre</a></li>
+								<li><a>Top Box Office</a></li>
+								<li><a>Showtimes & Tickets</a></li>
+								<li><a>In Theaters</a></li>
+								<li><a>Coming Soon</a></li>
+								<li><a>Movie News</a></li>
+								<li><a>India Movie Spotlight</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="tv-shows-and-watch box">
+						<div class="item-title tv-shows">
+							<div class="icon">
+								<i class="fas fa-tv"></i>
+							</div>
+							<div class="title">
+								<span>TV Shows</span>
+							</div>
+						</div>
+						<div class="items-name">
+							<ul>
+								<li><a>What's on TV & Streaming</a></li>
+								<li><a>Top Rated Shows</a></li>
+								<li><a>Most Popular Shoes</a></li>
+								<li><a>Browse TV Shows By Genre</a></li>
+								<li><a>TV News</a></li>
+								<li><a>India TV Spotlight</a></li>
+							</ul>
+						</div>
+						<div class="item-title watch">
+							<div class="icon">
+								<i class="fab fa-youtube"></i>
+							</div>
+							<div class="title">
+								<span>Watch</span>
+							</div>
+						</div>
+						<div class="items-name">
+							<ul>
+								<li><a>What to Watch</a></li>
+								<li><a>Lates Trailers</a></li>
+								<li><a>IMDb Originals</a></li>
+								<li><a>IMDb Picks</a></li>
+								<li><a>IMDb Podcasts</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="awards box">
+						<div class="item-title movies">
+							<div class="icon">
+								<i class="fas fa-star"></i>
+							</div>
+							<div class="title">
+								<span>Awards & Events</span>
+							</div>
+						</div>
+						<div class="items-name">
+							<ul>
+								<li><a>Oscars</a></li>
+								<li><a>Top Rated Shows</a></li>
+								<li><a>Most Popular Shoes</a></li>
+								<li><a>Browse TV Shows By Genre</a></li>
+								<li><a>TV News</a></li>
+								<li><a>India TV Spotlight</a></li>
+								<li><a>Oscars</a></li>
+								<li><a>Top Rated Shows</a></li>
+								<li><a>Most Popular Shoes</a></li>
+								<li><a>Browse TV Shows By Genre</a></li>
+								<li><a>TV News</a></li>
+								<li><a>India TV Spotlight</a></li>
+								<li><a>Oscars</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="celebs box">
+						<div class="item-title celebs">
+							<div class="icon">
+								<i class="fas fa-user" style="font-size: 27px"></i>
+							</div>
+							<div class="title">
+								<span>Celebs</span>
+							</div>
+						</div>
+						<div class="items-name">
+							<ul>
+								<li><a>Born Today</a></li>
+								<li><a>Most Popular Celebs</a></li>
+								<li><a>Celebrity News</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="empty box"></div>
+					<div class="community box">
+						<div class="item-title community">
+							<div class="icon">
+								<i class="fas fa-globe-asia" style="font-size: 27px"></i>
+							</div>
+							<div class="title">
+								<span>Community</span>
+							</div>
+						</div>
+						<div class="items-name">
+							<ul>
+								<li><a>Help Center</a></li>
+								<li><a>Contributer Zone</a></li>
+								<li><a>Polls</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<script defer>
-			const slides = document.querySelectorAll(".slide");
 			const modal = document.querySelector(".modal");
+			const slides = document.querySelectorAll(".slide");
+			const category = document.querySelector(".category");
+
 			document.querySelector("#menu-btn").addEventListener("click", () => {
 				modal.classList.toggle("hide");
 			});
 
+			document.querySelector("#close-btn").addEventListener("click", () => {
+				modal.classList.add("hide");
+			});
+
+			document
+				.querySelector(".dropdown-selector")
+				.addEventListener("click", () => {
+					category.classList.toggle("hide");
+				});
+
 			let slideIndex = 1;
 			function changeSlide(index) {
-				console.log("here in changeSlide");
-				showSlides(slideIndex += index);
+				showSlides((slideIndex += index));
 			}
 
-			document.querySelector(".control-slide-next").addEventListener("click", () => {
-				changeSlide(1);
-			})
+			document
+				.querySelector(".control-slide-next")
+				.addEventListener("click", () => {
+					changeSlide(1);
+				});
 
-			document.querySelector(".control-slide-previous").addEventListener("click", () => {
-				changeSlide(-1);
-			})
+			document
+				.querySelector(".control-slide-previous")
+				.addEventListener("click", () => {
+					changeSlide(-1);
+				});
 
 			function showSlides(index) {
-				console.log("here in showSlides");
 				if (index > slides.length - 1) {
 					slideIndex = 0;
-				}
-				else if (index < 0) {
+				} else if (index < 0) {
 					slideIndex = slides.length - 1;
 				}
 				for (let i = 0; i < slides.length; i++) {

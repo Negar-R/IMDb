@@ -1,0 +1,86 @@
+.hide {
+    display: none !important;
+}
+
+.modal {
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modal .modal-content {
+    padding: 32px 0px;
+}
+
+.modal .modal-content .modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 80px;
+    padding: 0px 40px;
+}
+
+.modal .modal-content .modal-header .logo #logo-in-menu {
+    width: 98px;
+    height: 50px;
+}
+
+
+.modal .modal-content .modal-header .icon #close-btn {
+    color: rgb(245, 197, 24);
+    background-color: black;
+    border: none;
+    font-size: 48px;
+}
+
+
+.modal .modal-content .modal-items {
+    display: grid;
+    /* grid-column: 1; */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; */
+    margin-top: 40px;
+    padding-left: 120px;
+}
+
+/* .modal .modal-content .modal-items .box {
+    max-width: 338px;
+    width: 100%;
+} */
+
+.item-title {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.modal .modal-content .modal-items .item-title .icon {
+    color: rgb(245, 197, 24);
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.modal .modal-content .modal-items .item-title .title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.modal .modal-items .box .items-name > ul > li {
+    /* display: flex; */
+    color: white;
+    font-size: 20px;
+    line-height: 40px;
+    list-style-type: none;
+    /* justify-content: flex-start; */
+}
+
+.modal .modal-items .box .items-name > ul > li > a{
+    /* padding-left: 76px; */
+    /* line-height: 30px; */
+}
