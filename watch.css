@@ -1,3 +1,18 @@
+.featured-today {
+    margin-top: 80px;
+}
+
 .featured-today .title > span {
-    color: rgb(255, )
+    color: rgb(245, 197, 24);
+    font-size: 30px;
+    font-weight: bold
+}
+
+.featured-today .featured-slides .preview-two-slide {
+    margin-top: 20px;
+}
+
+.featured-today .featured-slides .preview-two-slide > img {
+    width: 395px;
+    height: 222px;
 }
