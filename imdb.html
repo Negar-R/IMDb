@@ -80,9 +80,9 @@
 											></i>
 											<span>Keywords</span>
 										</li>
-										<!-- <hr
+										<hr
 											style="border: 1px solid #ccc; background-color: black"
-										/> -->
+										/>
 										<li class="flex-category-item">
 											<i style="font-size: 24px" class="fab fa-searchengin"></i>
 											<span>Advanced Search</span>
@@ -155,7 +155,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="slide hide">
+				<div class="slide">
 					<div class="preview-image">
 						<img src="images/video-preview/red.jpg" alt="Turning Red" />
 					</div>
@@ -183,7 +183,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="slide hide">
+				<div class="slide">
 					<div class="preview-image">
 						<img src="images/video-preview/baby.jpg" alt="Turning Red" />
 					</div>
@@ -274,19 +274,38 @@
 		</div>
 
 		<div class="featured-today container">
-			<div class="title">
+			<!-- <div class="title">
 				<span>Featured today</span>
-			</div>
+			</div> -->
 			<div class="featured-slides">
-				<div class="preview-two-slide">
+				<!-- <div class="featured-slides-container"> -->
+				<div class="slide">
 					<img src="images/video-preview/turning_red.jpg" alt="Turning Red" />
+				</div>
+				<div class="slide">
 					<img src="images/video-preview/baby.jpg" alt="Turning Red" />
 				</div>
-				<div class="preview-two-slide">
-					<img src="images/video-preview/red.jpg" alt="Turning Red" />
-					<img src="images/video-preview/soul.jpg" alt="Turning Red" />
+				<div class="slide">
+					<img src="images/video-preview/raya.jpeg" alt="Turning Red" />
 				</div>
+				<div class="slide">
+					<img src="images/video-preview/cars1.jpeg" alt="Turning Red" />
+				</div>
+				<div class="slide">
+					<img src="images/video-preview/ferdi.jpeg" alt="Turning Red" />
+				</div>
+				<div class="slide">
+					<img src="images/video-preview/luca.jpg" alt="Turning Red" />
+				</div>
+				<div class="control-slide control-slide-next">
+					<i class="fas fa-chevron-right" style="font-size: 38px"></i>
+				</div>
+				<div class="control-slide control-slide-previous">
+					<i class="fas fa-chevron-left" style="font-size: 38px"></i>
+				</div>
+				<!-- </div> -->
 			</div>
+			<div class="empty" style="width: 300px"></div>
 		</div>
 
 		<div class="modal hide">
@@ -438,8 +457,71 @@
 
 		<script defer>
 			const modal = document.querySelector(".modal");
-			const slides = document.querySelectorAll(".slide");
+			// const slides = document.querySelectorAll(".slide");
 			const category = document.querySelector(".category");
+
+			slider(document.querySelector(".carousel-video"), 1);
+			slider(document.querySelector(".featured-slides"), 2);
+
+			function slider(parent, slideCount) {
+				const slides = parent.querySelectorAll(".slide");
+
+				let slideIndex = 0;
+				function changeSlide(index) {
+					showSlides((slideIndex += index));
+				}
+
+				parent
+					.querySelector(".control-slide-next")
+					.addEventListener("click", () => {
+						changeSlide(slideCount);
+					});
+
+				parent
+					.querySelector(".control-slide-previous")
+					.addEventListener("click", () => {
+						changeSlide(-slideCount);
+					});
+
+				function showSlides(index) {
+					if (index > slides.length - 1) {
+						slideIndex = 0;
+					} else if (index < 0) {
+						slideIndex = slides.length - 1;
+					}
+					for (let i = 0; i < slides.length; i++) {
+						slides[i].classList.add("hide");
+					}
+
+					let start = 0;
+					let end = 0;
+
+					// console.log("len = " + slides.length);
+					// console.log("this is index" + index);
+					// console.log(slideIndex, "this is slide index");
+
+					if (slideIndex + slideCount > slides.length) {
+						start = 0;
+						end = slideCount;
+						console.log("length", start, end);
+					} else if (slideIndex + slideCount < 0) {
+						end = slides.length - 1;
+						start = end - slideCount;
+						console.log("zero", start, end);
+					} else {
+						start = slideIndex;
+						end = slideIndex + slideCount;
+						console.log("here", start, end);
+					}
+
+					for (let i = start; i < end; i++) {
+						slides[i].classList.remove("hide");
+						console.log(i, "this is i");
+					}
+				}
+
+				changeSlide(slideCount);
+			}
 
 			document.querySelector("#menu-btn").addEventListener("click", () => {
 				modal.classList.toggle("hide");
@@ -454,35 +536,6 @@
 				.addEventListener("click", () => {
 					category.classList.toggle("hide");
 				});
-
-			let slideIndex = 1;
-			function changeSlide(index) {
-				showSlides((slideIndex += index));
-			}
-
-			document
-				.querySelector(".control-slide-next")
-				.addEventListener("click", () => {
-					changeSlide(1);
-				});
-
-			document
-				.querySelector(".control-slide-previous")
-				.addEventListener("click", () => {
-					changeSlide(-1);
-				});
-
-			function showSlides(index) {
-				if (index > slides.length - 1) {
-					slideIndex = 0;
-				} else if (index < 0) {
-					slideIndex = slides.length - 1;
-				}
-				for (let i = 0; i < slides.length; i++) {
-					slides[i].classList.add("hide");
-				}
-				slides[slideIndex].classList.remove("hide");
-			}
 		</script>
 	</body>
 </html>

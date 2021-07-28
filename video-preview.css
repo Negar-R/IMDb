@@ -18,6 +18,8 @@
     border-radius: 4px;
     color: white;
     padding: 12px;
+    bottom: 50%;
+    transform: translateY(50%);
 }
 
 .control-slide:hover {
@@ -26,12 +28,10 @@
 
 .control-slide-next {
     right: 5px !important;
-    bottom: 50%;
 }
 
 .control-slide-previous {
-    left: 5px !important;;
-    bottom: 50%;
+    left: 5px !important;
 }
 
 .slide {
