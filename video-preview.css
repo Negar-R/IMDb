@@ -62,7 +62,7 @@
 
 .slide .details .poster img {
     width: 165px;
-    height: 244px;
+    height: 235px;
 }
 
 .slide .details .poster .icons-in-details {
@@ -185,4 +185,10 @@
     color: rgb(194, 186, 186);
     font-size: 1rem;
     line-height: 1.5rem;
+}
+
+@media screen and (max-width: 1057px) {
+    .upnext-video {
+        display: none;
+    }
 }

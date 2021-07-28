@@ -18,9 +18,13 @@
     text-decoration: none;
 }
 
+#navbar .hamburger-menu {
+    display: none;
+}
+
 #logo-in-navbar {
     width: 64px;
-    height: 32px;
+    height: 35px;
 }
 
 .search-box {
@@ -84,4 +88,39 @@
 
 .search-type-head  .fa .fa-search {
     position: absolute;
+}
+
+#navbar .search-icon {
+    color: white; 
+    font-size: 18px;
+    display: none;
+}
+
+@media screen and (max-width: 1057px) {
+    #navbar .hamburger-menu {
+        display: block;
+        padding: 15px;
+    }
+    #navbar #menu {
+        display: none;
+    }
+    #navbar #imdb-pro {
+        display: none;
+    }
+    #navbar #watchlist {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    #navbar .search-box {
+        display: none;
+    }
+    #navbar .logo {
+        flex-grow: 1;
+    }
+    #navbar .search-icon {
+        display: block;
+        padding: 15px;
+    }
 }

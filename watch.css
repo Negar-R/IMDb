@@ -1,15 +1,17 @@
-.featured-today {
+.watch-video .title {
+    color: rgb(245, 197, 24);
+    font-size: 30px;
+    font-weight: bold;
     margin-top: 80px;
+}
+
+.featured-today {
+    margin-top: 40px;
     /* position: relative; */
     display: flex;
     justify-content: center;
 }
 
-.featured-today .title > span {
-    color: rgb(245, 197, 24);
-    font-size: 30px;
-    font-weight: bold
-}
 
 .featured-slides {
     display: flex;

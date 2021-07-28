@@ -8,19 +8,29 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 		/>
-		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+		<script src="imdb-scripts.js"></script>
 		<link rel="stylesheet" type="text/css" href="general.css" />
 		<link rel="stylesheet" type="text/css" href="navbar.css" />
 		<link rel="stylesheet" type="text/css" href="modal-menu.css" />
 		<link rel="stylesheet" type="text/css" href="video-preview.css" />
 		<link rel="stylesheet" type="text/css" href="watch.css" />
+		<link rel="stylesheet" type="text/css" href="hamburger-menu.css" />
 
 		<title>IMDb Negar</title>
 	</head>
 	<body>
 		<nav class="container">
 			<div id="navbar">
-				<div class="log">
+				<div class="hamburger-menu">
+					<div class="hamburger-icon">
+						<button class="hamburger-btn">
+							<i class="fas fa-bars"></i>
+						</button>
+					</div>
+				</div>
+
+				<div class="logo">
 					<a href="https://www.imdb.com/?ref_=nv_home">
 						<img
 							id="logo-in-navbar"
@@ -101,11 +111,11 @@
 								placeholder="Search IMDb"
 							/>
 						</div>
-						<!-- <div class="search-icon" style="color: white; font-size: 24px">
-							<i class="fa fa-search"></i>
-						</div> -->
-						<!-- <i class="fa fa-search"></i> -->
 					</div>
+				</div>
+
+				<div class="search-icon">
+					<i class="fa fa-search"></i>
 				</div>
 
 				<div id="imdb-pro">
@@ -129,11 +139,11 @@
 			<div class="carousel-video">
 				<div class="slide">
 					<div class="preview-image">
-						<img src="images/video-preview/turning_red.jpg" alt="Turning Red" />
+						<img src="images/video-preview/machine.jpg" alt="Michells vs Machine" />
 					</div>
 					<div class="details">
 						<div class="poster">
-							<img src="images/video-preview/soul.jpg" />
+							<img src="images/video-preview/michell.jpeg" />
 							<div class="icons-in-details">
 								<div class="bookmark">
 									<i class="fas fa-bookmark"></i>
@@ -148,7 +158,7 @@
 								<i class="fa fa-play-circle"></i>
 							</div>
 							<div class="titles" style="color: white">
-								<div class="header">Turning Red</div>
+								<div class="header">Michells VS Machines</div>
 								<div class="short">Lorem ipsum dolor sit!</div>
 							</div>
 							<div class="timeline">1.31</div>
@@ -161,35 +171,7 @@
 					</div>
 					<div class="details">
 						<div class="poster">
-							<img src="images/video-preview/soul.jpg" />
-							<div class="icons-in-details">
-								<div class="bookmark">
-									<i class="fas fa-bookmark"></i>
-								</div>
-								<div class="plus">
-									<i class="fas fa-plus"></i>
-								</div>
-							</div>
-						</div>
-						<div class="description">
-							<div class="icon">
-								<i class="fa fa-play-circle"></i>
-							</div>
-							<div class="titles" style="color: white">
-								<div class="header">Turning Green</div>
-								<div class="short">Lorem ipsum dolor sit!</div>
-							</div>
-							<div class="timeline">1.31</div>
-						</div>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="preview-image">
-						<img src="images/video-preview/baby.jpg" alt="Turning Red" />
-					</div>
-					<div class="details">
-						<div class="poster">
-							<img src="images/video-preview/soul.jpg" />
+							<img src="images/video-preview/redd.jpeg" />
 							<div class="icons-in-details">
 								<div class="bookmark">
 									<i class="fas fa-bookmark"></i>
@@ -205,9 +187,39 @@
 							</div>
 							<div class="titles" style="color: white">
 								<div class="header">Turning Red</div>
-								<div class="short">Lorem ipsum dolor sit!</div>
+								<div class="short">
+									The Bridge thumbnail for the tif file looks more red
+								</div>
 							</div>
-							<div class="timeline">1.31</div>
+							<div class="timeline">1.20</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="preview-image">
+						<img src="images/video-preview/baby.jpg" alt="Boss Baby" />
+					</div>
+					<div class="details">
+						<div class="poster">
+							<img src="images/video-preview/baby-2.jpeg" />
+							<div class="icons-in-details">
+								<div class="bookmark">
+									<i class="fas fa-bookmark"></i>
+								</div>
+								<div class="plus">
+									<i class="fas fa-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="description">
+							<div class="icon">
+								<i class="fa fa-play-circle"></i>
+							</div>
+							<div class="titles" style="color: white">
+								<div class="header">Boss Baby</div>
+								<div class="short">Tim Templeton is a stay-at-home</div>
+							</div>
+							<div class="timeline">2.11</div>
 						</div>
 					</div>
 				</div>
@@ -234,8 +246,8 @@
 							></i>
 						</div>
 						<div class="titles">
-							<div class="header">4 Feel-comedies</div>
-							<div class="short">See our recommendations</div>
+							<div class="header">Soul</div>
+							<div class="short">Watch The Latest Trailer</div>
 						</div>
 					</div>
 				</div>
@@ -249,13 +261,13 @@
 							></i>
 						</div>
 						<div class="titles">
-							<div class="header">4 Feel-comedies</div>
+							<div class="header">Luca</div>
 							<div class="short">See our recommendations</div>
 						</div>
 					</div>
 				</div>
 				<div class="image-in-side">
-					<img src="images/video-preview/soul.jpg" alt="Soul" />
+					<img src="images/video-preview/tinkerbell.jpeg" alt="Soul" />
 					<div class="up-next-details">
 						<div class="icon">
 							<i
@@ -264,8 +276,8 @@
 							></i>
 						</div>
 						<div class="titles">
-							<div class="header">4 Feel-comedies</div>
-							<div class="short">See our recommendations</div>
+							<div class="header">Tinkerbell And Friends</div>
+							<div class="short">Watch The Interview</div>
 						</div>
 					</div>
 				</div>
@@ -273,39 +285,41 @@
 			</div>
 		</div>
 
-		<div class="featured-today container">
-			<!-- <div class="title">
+		<div class="watch-video container">
+			<div class="title">
 				<span>Featured today</span>
-			</div> -->
-			<div class="featured-slides">
-				<!-- <div class="featured-slides-container"> -->
-				<div class="slide">
-					<img src="images/video-preview/turning_red.jpg" alt="Turning Red" />
-				</div>
-				<div class="slide">
-					<img src="images/video-preview/baby.jpg" alt="Turning Red" />
-				</div>
-				<div class="slide">
-					<img src="images/video-preview/raya.jpeg" alt="Turning Red" />
-				</div>
-				<div class="slide">
-					<img src="images/video-preview/cars1.jpeg" alt="Turning Red" />
-				</div>
-				<div class="slide">
-					<img src="images/video-preview/ferdi.jpeg" alt="Turning Red" />
-				</div>
-				<div class="slide">
-					<img src="images/video-preview/luca.jpg" alt="Turning Red" />
-				</div>
-				<div class="control-slide control-slide-next">
-					<i class="fas fa-chevron-right" style="font-size: 38px"></i>
-				</div>
-				<div class="control-slide control-slide-previous">
-					<i class="fas fa-chevron-left" style="font-size: 38px"></i>
-				</div>
-				<!-- </div> -->
 			</div>
-			<div class="empty" style="width: 300px"></div>
+			<div class="featured-today">
+				<div class="featured-slides">
+					<!-- <div class="featured-slides-container"> -->
+					<div class="slide">
+						<img src="images/video-preview/turning_red.jpg" alt="Turning Red" />
+					</div>
+					<div class="slide">
+						<img src="images/video-preview/baby.jpg" alt="Turning Red" />
+					</div>
+					<div class="slide">
+						<img src="images/video-preview/raya.jpeg" alt="Turning Red" />
+					</div>
+					<div class="slide">
+						<img src="images/video-preview/cars1.jpeg" alt="Turning Red" />
+					</div>
+					<div class="slide">
+						<img src="images/video-preview/ferdi.jpeg" alt="Turning Red" />
+					</div>
+					<div class="slide">
+						<img src="images/video-preview/luca.jpg" alt="Turning Red" />
+					</div>
+					<div class="control-slide control-slide-next">
+						<i class="fas fa-chevron-right" style="font-size: 38px"></i>
+					</div>
+					<div class="control-slide control-slide-previous">
+						<i class="fas fa-chevron-left" style="font-size: 38px"></i>
+					</div>
+					<!-- </div> -->
+				</div>
+				<div class="empty" style="width: 300px"></div>
+			</div>
 		</div>
 
 		<div class="modal hide">
@@ -455,73 +469,58 @@
 			</div>
 		</div>
 
+		<div class="hamburger-content hide">
+			<div class="hamburger-items">
+				<div class="top-section">
+					<button class="close-hamburger">
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+				<hr
+					style="
+						border: 0.5px solid #ccc;
+						background-color: black;
+						margin-bottom: 10px;
+					"
+				/>
+				<div class="flex-items">
+					<i class="fas fa-film"></i>
+					<span>Movies</span>
+					<i class="fas fa-angle-down"></i>
+				</div>
+				<div class="flex-items">
+					<i class="fas fa-tv"></i>
+					<span>TV Shows</span>
+					<i class="fas fa-angle-down"></i>
+				</div>
+				<div class="flex-items">
+					<i class="fab fa-youtube"></i>
+					<span>Watch</span>
+					<i class="fas fa-angle-down"></i>
+				</div>
+				<div class="flex-items">
+					<i class="fas fa-star"></i>
+					<span>Awards & Events</span>
+					<i class="fas fa-angle-down"></i>
+				</div>
+				<div class="flex-items">
+					<i class="fas fa-user"></i>
+					<span>Celebs</span>
+					<i class="fas fa-angle-down"></i>
+				</div>
+				<div class="flex-items">
+					<i class="fas fa-globe-asia"></i>
+					<span>Community</span>
+					<i class="fas fa-angle-down"></i>
+				</div>
+			</div>
+		</div>
+
 		<script defer>
 			const modal = document.querySelector(".modal");
 			// const slides = document.querySelectorAll(".slide");
 			const category = document.querySelector(".category");
-
-			slider(document.querySelector(".carousel-video"), 1);
-			slider(document.querySelector(".featured-slides"), 2);
-
-			function slider(parent, slideCount) {
-				const slides = parent.querySelectorAll(".slide");
-
-				let slideIndex = 0;
-				function changeSlide(index) {
-					showSlides((slideIndex += index));
-				}
-
-				parent
-					.querySelector(".control-slide-next")
-					.addEventListener("click", () => {
-						changeSlide(slideCount);
-					});
-
-				parent
-					.querySelector(".control-slide-previous")
-					.addEventListener("click", () => {
-						changeSlide(-slideCount);
-					});
-
-				function showSlides(index) {
-					if (index > slides.length - 1) {
-						slideIndex = 0;
-					} else if (index < 0) {
-						slideIndex = slides.length - 1;
-					}
-					for (let i = 0; i < slides.length; i++) {
-						slides[i].classList.add("hide");
-					}
-
-					let start = 0;
-					let end = 0;
-
-					// console.log("len = " + slides.length);
-					// console.log("this is index" + index);
-					// console.log(slideIndex, "this is slide index");
-
-					if (slideIndex + slideCount > slides.length) {
-						start = 0;
-						end = slideCount;
-						console.log("length", start, end);
-					} else if (slideIndex + slideCount < 0) {
-						end = slides.length - 1;
-						start = end - slideCount;
-						console.log("zero", start, end);
-					} else {
-						start = slideIndex;
-						end = slideIndex + slideCount;
-						console.log("here", start, end);
-					}
-
-					for (let i = start; i < end; i++) {
-						slides[i].classList.remove("hide");
-						console.log(i, "this is i");
-					}
-				}
-
-				changeSlide(slideCount);
-			}
+			const hamburgerContent = document.querySelector(".hamburger-content");
 
 			document.querySelector("#menu-btn").addEventListener("click", () => {
 				modal.classList.toggle("hide");
@@ -536,6 +535,19 @@
 				.addEventListener("click", () => {
 					category.classList.toggle("hide");
 				});
+
+			document.querySelector(".hamburger-btn").addEventListener("click", () => {
+				hamburgerContent.classList.toggle("hide");
+			});
+
+			document
+				.querySelector(".close-hamburger")
+				.addEventListener("click", () => {
+					hamburgerContent.classList.toggle("hide");
+				});
+
+			slider(document.querySelector(".carousel-video"), 1);
+			slider(document.querySelector(".featured-slides"), 2);
 		</script>
 	</body>
 </html>
